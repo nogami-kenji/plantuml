@@ -1,0 +1,49 @@
+@startuml
+
+package Collection {
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+  Object[] elementData
+  size()
+}
+}
+
+note top of AbstractCollection : コメントです
+
+enum TimeUnit {
+  DAYS
+  HOURS
+  MINUTES
+}
+
+annotation SuppressWarnings
+
+
+class User {
+  ID
+  Password
+}
+
+class Pfrofile {
+  name
+  adress
+}
+
+class Tool {
+  name
+}
+
+User *-- Profile
+User "1" *-- "n" TooL
+@enduml

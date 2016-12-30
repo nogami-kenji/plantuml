@@ -1,0 +1,21 @@
+@startuml
+title <b><size 20>ユースケース[サンプルサービス]
+
+left to right direction
+
+actor サービス利用者 as user
+actor サービス管理者 as admin
+
+rectangle サンプルサービス {
+  package 認証管理 {
+    user --> (ログインする)
+    note bottom : ID/PASSWORD
+    admin --> (ログインする)
+  }
+}
+
+rectangle 認証システム {
+  (ログインする) --> (ログイン認証する)
+}
+
+@enduml
