@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+
+object userA {
+  name = "hogehoge"
+  email = "hogehoge@hogehoge"
+}
+
+object userB {
+  name = "fugafuga"
+  email = "fugafuga@fugafuga"
+}
+
+object toolA {
+  toolName = "emacs"
+  path = "/usr/bin/emacs"
+}
+
+object toolB {
+  toolName = "atom"
+  path = "/usr/local/bin/atom"
+}
+
+userA *-- toolA
+userB *-- toolB
+
+@enduml
