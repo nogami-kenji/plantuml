@@ -1,5 +1,4 @@
 @startuml
-left to right direction
 
 partition Conductor {
   (*) --> "Climbs on Platform"
